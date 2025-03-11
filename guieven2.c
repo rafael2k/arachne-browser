@@ -7,8 +7,6 @@
 #include "arachne.h"
 #include "gui.h"
 
-int bioskey(int cmd);
-
 #define MOUSESTEP 8
 
 #ifndef XTVERSION

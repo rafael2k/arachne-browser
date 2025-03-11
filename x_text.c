@@ -12,9 +12,6 @@
 #include "v_putimg.h"
 #include "x_lopif.h"
 
-void v_putimg(int xz,int yz, char *bitmap);
-void v_getimg(int x1, int y1, int x2, int y2, char *bitmap);
-
 int xv_chr_mem(char *fnt_chr,           // Zacatek znaku ve fontu
                                         // tr.: beginning of chars in font 
 		int  kx,                // Posun ve smeru X

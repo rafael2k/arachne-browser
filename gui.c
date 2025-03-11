@@ -9,8 +9,6 @@
 #include "html.h"
 #include "internet.h" //because of background tasks...
 
-int bioskey(int cmd);
-
 #define MOUSESTEP 8   //caverge adjustment
 
 int GUITICK(void)

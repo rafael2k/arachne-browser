@@ -487,7 +487,7 @@ if(type==EMBED && !strncmpi(&URLptr[strlen(URLptr)-4],".SWF",4)) found=1; else
   memerr();
 //JdS }
 
-#ifdef POSIX //rafael2k - back to POSIX. Was: JdS (was POSIX) changed to LINUX
+#ifdef LINUX //JdS (was POSIX)
  cmdbuf[0] = '\0';
 #else
  strcpy(cmdbuf,"@echo off\n");

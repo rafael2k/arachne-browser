@@ -10,7 +10,6 @@
 
 #define MOUSEPIX 4
 
-int bioskey(int cmd);
 //customizable toolbar icons:
 
 void toolbar(char newtoolbarmode,char forced)

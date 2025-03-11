@@ -13,10 +13,6 @@
 #include "internet.h"
 #endif
 
-void bioskey_init(void);
-void bioskey_close(void);
-
-
 /* maximum number of lines in cfg file */
 #define LINES 1024
 

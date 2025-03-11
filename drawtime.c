@@ -1,9 +1,6 @@
 
 #include "arachne.h"
 
-int bioskey(int cmd);
-
-
 void draw_time_online(void);
 
 long ScreenSaver=0l;

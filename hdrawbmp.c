@@ -139,13 +139,13 @@ int XCHdrawBMP(struct picinfo *bmp)
  else
  {
 #ifdef POSIX
-  printf("Unsupported BMP type: %d bpp\n",type);
+  printf("Unsupported number o BMP bit planes: %d\n",type);
 #endif
   goto err;
  }
 
  if(k)
-  linebytes += (4-k)%4;
+  linebytes+=4-k;
 
  if(type!=24)             //bitCount = Palette
  {
