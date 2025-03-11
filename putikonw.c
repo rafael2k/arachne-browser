@@ -12,6 +12,10 @@
 #include "v_putimg.h"
 #include "putikons.h"
 
+#include <sys/param.h>
+#define min MIN
+#define max MAX
+
 void memerr(void);
 int  PresspalO (int multip, char *Palin[], int *Npalin, char  *palout,
 	       int *npalout, int *mapio, int *Mmapio[],

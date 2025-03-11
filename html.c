@@ -11,7 +11,7 @@
 #include "html.h"
 #include "internet.h"
 
-
+int kbhit(void);
 
 int renderHTML(struct Page *p)
 {
