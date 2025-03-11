@@ -2,11 +2,11 @@
 ARACHNE_FILES=distrib/arachne-svgalib-1.95/
 
 all:
-	@ echo "Choose the build option:"
-	@ echo "sdl2"
-	@ echo "svgalib"
+	@ echo "Choose one target option for building:"
+	@ echo " sdl2"
+	@ echo " svgalib"
 	@ echo
-	@ echo "To install:"
+	@ echo "Choose one target option for installing:"
 	@ echo "install_sdl2"
 	@ echo "install_svgalib"
 
@@ -16,10 +16,10 @@ sdl2:
 svgalib:
 	make -C svgalib
 
-install_sdl2: install
+install_sdl2: install sdl2
 	install -D -m 755 -o root -g root sdl2/arachne-sdl2 /usr/bin/arachne-sdl2
 
-install_svgalib: install
+install_svgalib: install svgalib
 	install -D -m 755 -o root -g root svgalib/arachne-svgalib /usr/bin/arachne-svgalib
 
 install:
