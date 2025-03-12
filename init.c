@@ -449,13 +449,11 @@ bioskey_init();//switch terminal to raw mode
 
 if(arachne.GUIstyle==8) //first start ?
 {
-#if 0
  if(x_maxx()<640)
   arachne.GUIstyle = STYLE_SMALL2;
  else if(x_maxx()<800)
   arachne.GUIstyle = STYLE_SMALL1;
  else
-#endif
   arachne.GUIstyle = STYLE_ARACHNE;
 }
 
