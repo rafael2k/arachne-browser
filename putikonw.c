@@ -634,12 +634,14 @@ int MergePalIcons(int npalikn, char *palin, int *mapio, int *Mmapio[],
 		2, 1, 4,  Savecols );
   if((irc&1)==0) { ; }      // Error ?!
 
+#ifdef HICOLOR
   if(!xg_video_XMS || xg_256 == MM_Hic) //!!mp
   {
    if(npalout > IiNpal)      // Nove barvy
    { for(i=IiNpal; i<npalout; i++) x_pal_1(i, &Iipal[i]);
    }
   }
+#endif
   IiNpal=npalout; Mapuj=1;
 
   Kresli:

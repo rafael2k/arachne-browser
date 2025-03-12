@@ -402,7 +402,9 @@ if(npalout>IiNpal)   // I/970429
  if(xg_video_XMS==0 || xg_256 == MM_Hic) //HARO
  //not while in virtual screen!
 #endif
-  x_pal_1(IiNpal, &Iipal[3 * IiNpal]);
+#ifdef HICOLOR
+     x_pal_1(IiNpal, &Iipal[3 * IiNpal]);
+#endif
  IiNpal=npalout;
 }// << I/970429
  ret= Mmapio[1][0];

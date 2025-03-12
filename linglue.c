@@ -762,6 +762,7 @@ int x_getmaxcol(void)
 
 void x_palett(int len, char *paleta)
 {
+#ifdef HICOLOR
  //set palette to array or (3 R-G-B bytes)*len
   if(xg_256 == MM_Hic)		 // only a copy into xg_hipal
   {
@@ -773,6 +774,7 @@ void x_palett(int len, char *paleta)
 				   xg_hipal[3*i+2]);
        }
   }
+#endif
   //else real palette mapping.... later....
 
 }
@@ -803,12 +805,14 @@ int x_detect(char *svga, int *kby)
  return 0;
 }
 
+#ifdef HICOLOR
 void x_pal_1(int n_pal, char *pal_1)
 {
  //set one color in palette
  memcpy(&xg_hipal[3*n_pal],pal_1,3);
  xg_hival[n_pal] = xh_RgbHiPal(xg_hipal[3*n_pal], xg_hipal[3*n_pal+1], xg_hipal[3*n_pal+2]);
 }
+#endif
 
 int x_rea_svga(char *path, char *g_jmeno, int *mod)
 {
@@ -858,6 +862,7 @@ void xh_ByteToHi(unsigned char *Ibuf, unsigned char *Hi,
    }
 }
 
+#ifdef HICOLOR
 // Conversion RGB (0..63) to Hi-color
 unsigned short xh_RgbHiPal(unsigned char R, unsigned char G, unsigned char B)
 {
@@ -866,6 +871,7 @@ unsigned short xh_RgbHiPal(unsigned char R, unsigned char G, unsigned char B)
    else
     return(RGBHI15(R,G,B));
 }
+#endif
 
 //---------------------------------------------------------------------------
 // virtual screens

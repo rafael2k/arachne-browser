@@ -431,7 +431,8 @@ init_bin();                     //initialization of memory, conf. files, etc.
 setuserpaths();                 //font, cache, gui, ... pathes
 
 // temporary, force 800x600 HiColor by default
-strcpy(arachne.graphics, config_get_str("GraphicsMode", "Hi16.J"));
+// strcpy(arachne.graphics, config_get_str("GraphicsMode", "Hi16.J"));
+strcpy(arachne.graphics, config_get_str("GraphicsMode", "VGA"));
 
 graphicsinit(arachne.graphics); //XLOPIF SVGA GRAPHICS
 
