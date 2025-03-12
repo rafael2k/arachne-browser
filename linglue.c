@@ -1229,6 +1229,7 @@ const unsigned short cur[32] =
 
 
   xg_256=MM_Hic; //set Hicolor flag...
+
   initpalette();
   x_settextjusty(0,2);	// always write text from upper left corner
 
@@ -1265,12 +1266,29 @@ const unsigned short cur[32] =
   SVGAx=1599;
   SVGAy=1199;
  }
+  if(strstr(svgamode,".I"))
  {
+  vga_setmode(G640x480x64K);
+  gl_setcontextvga(G640x480x64K);
+  SVGAx=639;
+  SVGAy=479;
+ }
+  if(strstr(svgamode,"VGA"))
+ {
+  xg_256=MM_16;
+  vga_setmode(G640x480x16);
+  gl_setcontextvga(G640x480x16);
+  SVGAx=639;
+  SVGAy=479;
+ }
+#if 0
+  {
   vga_setmode(G800x600x64K);
   gl_setcontextvga(G800x600x64K);
   SVGAx=799;
   SVGAy=599;
  }
+#endif
  vga_runinbackground(1);
  vga_oktowrite();
  gl_setwritemode(FONT_COMPRESSED|WRITEMODE_MASKED);
