@@ -430,8 +430,8 @@ if(ie_initswap()!=1)            //initialization of swapping system ie_swap
 init_bin();                     //initialization of memory, conf. files, etc.
 setuserpaths();                 //font, cache, gui, ... pathes
 
-// temporary, force 800x600 HiColor by default
-strcpy(arachne.graphics, config_get_str("GraphicsMode", "Hi16.J"));
+// get graphics mode from configuration
+strcpy(arachne.graphics, config_get_str("GraphicsMode", ""));
 
 graphicsinit(arachne.graphics); //XLOPIF SVGA GRAPHICS
 
@@ -757,7 +757,7 @@ void init_bin(void)
  /* load cookies.lst and check its size */
  ptr = config_get_str("CookieFile", NULL);
  if (ptr) {
-  sprintf(cookies.filename, ptr);
+  sprintf(cookies.filename, "%s", ptr);
  } else {
   sprintf(cookies.filename, "%s%s", userpath, "cookies.lst");
  }
