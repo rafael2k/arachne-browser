@@ -1,3 +1,5 @@
+WARNING: This is not Arachne official repository. Official repository is at: https://github.com/sraase/arachne-browser
+
 # Arachne Web Browser
 
 ## Introduction
